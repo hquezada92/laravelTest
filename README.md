@@ -24,4 +24,19 @@ Correr migrations con seeders
 > php artisan migrate --seed
 
 Ejecutados todos los pasos anteriores solo es necesario mediante linea de comandos en la carpeta del proyecto ejecutar el comando siguiente para que la aplicación entre en ejecución y pueda ser probada.
-> php artisan server 
+> php artisan serve
+
+Algunos pasos adicionales para optimización del proyecto previo a despliegues en producción a continuacióm.
+
+- Desactivar el modo debugger modificacion a false el valor de la variable de entorno
+> APP_DEBUG = false
+
+- Optimizacion del autoloader de composer con el siguiente comando
+> composer install --optimize-autoloader --no-dev
+
+- Optimización de configuration loading con el siguiente comando
+> php artisan config:cache
+
+- Optimizacion del Route Loading con el siguiente comando
+> php artisan route:cache
+
