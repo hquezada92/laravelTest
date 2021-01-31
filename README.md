@@ -1,6 +1,6 @@
 ## Instalación y configuración
 
-En primer lugar es necesario configurar el archivo .env en el que se parametrizan algunas variables de entorno necesarias para el funcionamiento del proyecto:
+En primer lugar es necesario configurar el archivo .env en el que se parametrizan algunas variables de entorno necesarias para el funcionamiento del proyecto, para esto es necesario hacer una copia del archivo .env.examplo y renombrar la copia a .env y sera este archivo en el que se realizen todas las configuraciones.
 
 En primer lugar es necesario configurar la conexión con la base de datos, se utiliza la base de datos MySql para este proyecto y por consiguiente es necesario configurar las siguientes variables de entorno
 - DB_CONNECTION=mysql
