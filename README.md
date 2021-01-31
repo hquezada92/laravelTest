@@ -46,3 +46,5 @@ La aplicacion ha sido desplegada en la siguiente url para pruebas:
 El dump de la BD se puede descargar con el siguiente enlace
 > https://drive.google.com/file/d/1s7Xl8xlK4B9QEqPMcD9sV0xvK3JSwU-f/view?usp=sharing
 
+La colección de endpoints de insomnia se puede descargar con el siguiente enlace
+> https://drive.google.com/file/d/1psVbZZasXLNlpoEjojDuxnxiqEiq8HmV/view?usp=sharing
