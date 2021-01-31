@@ -36,3 +36,4 @@ Route::post('/logout', function (Request $request) {
 Route::resource('users', 'UserController')->middleware('auth');
 // Resource route products
 Route::resource('products', 'ProductController')->middleware('auth');
+Route::get('searchProduct/{value}',[ProductController::class,'searchProduct'])->middleware('auth');

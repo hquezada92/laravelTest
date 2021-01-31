@@ -14,16 +14,21 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($filter='',$value='')
+    public function index()
     {
-        if ($filter=="0")
-            $products = Product::where('sku','like',$value)->get()->paginate(15);
-        elseif ($filter=="1")
-            $products = Product::where('name','like',$value)->get()->paginate(15);
-        elseif (empty($filter) or empty($value))
-            $products = Product::paginate(15);
-        
+        $products = Product::paginate(15);
         return Response($products,200);
+    }
+
+    public function searchProduct($value)
+    {
+        $products = Product::paginate(15);
+        if(empty(!$value)){
+            $products = Product::where('sku','like',"%$value%")
+                            ->orWhere('name','like',"%$value%")
+                            ->paginate(15);
+        }
+        return response()->json($products,200);
     }
 
     /**
