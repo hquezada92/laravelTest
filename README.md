@@ -40,3 +40,9 @@ Algunos pasos adicionales para optimización del proyecto previo a despliegues e
 - Optimizacion del Route Loading con el siguiente comando
 > php artisan route:cache
 
+La aplicacion ha sido desplegada en la siguiente url para pruebas:
+> https://app-laraveltest.herokuapp.com/
+
+El dump de la BD se puede descargar con el siguiente enlace
+> https://drive.google.com/file/d/1s7Xl8xlK4B9QEqPMcD9sV0xvK3JSwU-f/view?usp=sharing
+
