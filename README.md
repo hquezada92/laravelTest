@@ -14,6 +14,8 @@ En segundo lugar las variables de entorno para las funcinalidades de envio de co
 - MAILGUN_DOMAIN
 - MAILGUN_SECRET
 
+Valga aclarar que mailgun en entornos diferentes a desarrollo necesita que los recipients autorizen la recepcion de correos de mailgun y para esto es necesario acceder a la configuracion en mailgun por lo cual en la URL desplegada online el proceso de reseteo de contraseña arrojaria error al momento de enviar el correo con el link de reset.
+
 Por ultimo en cuanto a variables de entorno es necesario crear la variable de entorno con el secret para la autenticación JWT. Esto se realiza con el siguiente comando:
 > php artisan jwt:secret
 
