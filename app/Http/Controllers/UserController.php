@@ -66,9 +66,7 @@ class UserController extends Controller
         $status = Password::sendResetLink(
             $request->only('email')
         );
-        return $status === Password::RESET_LINK_SENT
-                ? response(['status' => __($status)],200)
-                : response()->withErrors(['email' => __($status)],200);
+        return response(['status' => __($status)],200);
     }
 
     public function resetPassword(ResetPasswordRequest $request)
@@ -83,9 +81,7 @@ class UserController extends Controller
                 event(new PasswordReset($user));
             }
         );
-        return $status == Password::PASSWORD_RESET
-                ? response(['status' => __($status)],200)
-                : response()->withErrors(['email' => [__($status)]]);
+        return response(['status' => __($status)],200);
     }
 
     /**
